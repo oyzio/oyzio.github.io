@@ -66,13 +66,16 @@ body {
 }
 
 .project-card {
+  position: relative;
   background: rgba(10, 4, 60, 0.8);
   border: 1px solid #00FFFF;
   border-radius: 12px;
   padding: 25px;
-  margin: 25px 0;
+  margin: 30px 0;
   backdrop-filter: blur(5px);
   transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 300px;
+  padding-bottom: 70px; /* Space for button */
 }
 
 .project-card:hover {
@@ -98,24 +101,41 @@ body {
   border-radius: 12px;
 }
 
+/* New button positioning */
+.project-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin-top: 15px;
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-  padding: 25px 0;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+  padding: 30px 0;
 }
 
 .skill-card {
-  padding: 15px;
+  padding: 18px;
   text-align: center;
   border: 1px solid #00FFFF;
   border-radius: 8px;
   transition: all 0.3s;
+  margin: 5px;
 }
 
 .skill-card:hover {
   background: rgba(0, 255, 255, 0.1);
   box-shadow: 0 0 15px #00FFFF;
+}
+
+/* Tech badges spacing */
+.tech-badges {
+  margin-bottom: 25px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 @keyframes twinkle {
@@ -132,5 +152,5 @@ h2 {
   font-family: 'Orbitron', sans-serif;
   color: #FF10F0;
   font-size: 2.5em;
-  margin: 40px 0;
+  margin: 40px 0 30px;
 }
