@@ -1,0 +1,96 @@
+/* Galaxy Background */
+body {
+  margin: 0;
+  background: radial-gradient(circle at 50% 50%, #0A043C, #2E0249);
+  color: white;
+  font-family: 'Space Mono', monospace;
+  overflow-x: hidden;
+}
+
+/* Stars Animation */
+#stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  animation: twinkle 3s infinite;
+}
+
+/* Glowing Buttons */
+.btn-glow {
+  background: #2E0249;
+  border: 2px solid #FF10F0;
+  color: #FF10F0;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 20px #FF10F0;
+  transform: scale(1.05);
+}
+
+/* Gym-Themed Project Cards */
+.project-card {
+  background: rgba(10, 4, 60, 0.8);
+  border: 1px solid #00FFFF;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.project-card:hover {
+  box-shadow: 0 0 25px #00FFFF;
+}
+
+/* Animations */
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Layout */
+#home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#home h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3em;
+  text-shadow: 0 0 15px #FF10F0;
+}
+
+#home p {
+  font-size: 1.5em;
+  color: #00FFFF;
+}
+
+#projects, #skills {
+  padding: 50px 20px;
+}
+
+#projects h2, #skills h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #FF10F0;
+}
+
+.skills-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
